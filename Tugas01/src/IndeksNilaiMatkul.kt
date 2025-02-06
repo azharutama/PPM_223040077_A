@@ -15,10 +15,14 @@ class IndeksNilaiMatkul {
 }
 
 fun main(args: Array<String>) {
+    if (args.isEmpty()) {
+        println("Nilai harus di isi")
+        return
+    }
 
     val nilaiAkhir = args[0].toIntOrNull()
     if (nilaiAkhir == null) {
-        println("Nilai harus di isi")
+        println("Harap masukkan angka yang valid.")
         return
     }
 
