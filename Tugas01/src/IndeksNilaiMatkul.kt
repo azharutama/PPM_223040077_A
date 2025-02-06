@@ -14,10 +14,15 @@ class IndeksNilaiMatkul {
     }
 }
 
-fun main() {
+fun main(args: Array<String>) {
+
+    val nilaiAkhir = args[0].toIntOrNull()
+    if (nilaiAkhir == null) {
+        println("Nilai harus di isi")
+        return
+    }
+
     val indeksNilaiMatkul = IndeksNilaiMatkul()
-    print("Masukkan nilai akhir: ")
-    val nilaiAkhir = readLine()?.toIntOrNull() ?: return println("Harap masukkan angka yang valid.")
     val indeks = indeksNilaiMatkul.hitungIndeks(nilaiAkhir)
     println("Nilai akhir: $nilaiAkhir - Indeks: $indeks")
 }
